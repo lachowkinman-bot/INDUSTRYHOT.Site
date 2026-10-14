@@ -1,0 +1,488 @@
+{
+  "$comment": "示范信源：首次启动时导入（scripts/seed.ts），已存在的不会被覆盖。之后在后台“信源”里新建、修改和暂停。字段说明见 docs/customize.md。九个领域的示范源以公开可抓的行业媒体和官方博客为主；中国大陆行业的一手信息多在公众号，需要极致了（Dajiala）key，上线后在后台添加。",
+  "sources": [
+    {
+      "id": "rss-openai-news",
+      "name": "OpenAI News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://openai.com/news/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": "openai",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "AI/科技"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-google-deepmind",
+      "name": "Google DeepMind",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://deepmind.google/blog/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": "google",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "AI/科技"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-nvidia-blog",
+      "name": "NVIDIA Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blogs.nvidia.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": "nvidia",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "算力/芯片"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-hugging-face",
+      "name": "Hugging Face Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://huggingface.co/blog/feed.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "开源生态"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-mistral",
+      "name": "Mistral AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://mistral.ai/news/rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-the-verge-ai",
+      "name": "The Verge · AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "AI/科技"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-techcrunch-ai",
+      "name": "TechCrunch · AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "AI/科技"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-simon-willison",
+      "name": "Simon Willison",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://simonwillison.net/atom/everything/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "个人",
+        "AI 应用"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-skift",
+      "name": "Skift",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://skift.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "酒店"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-hospitality-net",
+      "name": "Hospitality Net",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.hospitalitynet.org/rss/news/europe.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "酒店运营"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-restaurant-dive",
+      "name": "Restaurant Dive",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.restaurantdive.com/feeds/news/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "餐饮"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-nrn",
+      "name": "Nation's Restaurant News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.nrn.com/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "连锁/加盟"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-retail-dive",
+      "name": "Retail Dive",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.retaildive.com/feeds/news/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "电商"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-hr-dive",
+      "name": "HR Dive",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.hrdive.com/feeds/news/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "人力资源"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-marketing-dive",
+      "name": "Marketing Dive",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.marketingdive.com/feeds/news/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "市场营销"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-accounting-today",
+      "name": "Accounting Today",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.accountingtoday.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "企业财税"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-legal-dive",
+      "name": "Legal Dive",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.legaldive.com/feeds/news/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "法律合规"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-mckinsey",
+      "name": "McKinsey Insights",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.mckinsey.com/insights/rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": "mckinsey",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "咨询"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-geekpark",
+      "name": "极客公园",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.geekpark.net/rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "AI/科技"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-sspai",
+      "name": "少数派",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://sspai.com/feed",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "AI/科技"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-ifanr",
+      "name": "爱范儿",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.ifanr.com/feed",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "AI/科技"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-wired",
+      "name": "Wired",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.wired.com/feed/rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "AI/科技"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-arstechnica",
+      "name": "Ars Technica",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://feeds.arstechnica.com/arstechnica/index",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "AI/科技"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    }
+  ]
+}

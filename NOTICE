@@ -1,0 +1,24 @@
+INDUSTRYHOT.Site
+Copyright (c) 2026 数字生命卡兹克（AIHOT 项目原版权人）
+Copyright (c) 2026 INDUSTRYHOT.Site contributors
+
+本项目（INDUSTRYHOT.Site）以 Apache License 2.0 发布（见 LICENSE），允许商用、
+修改与再分发，但再分发时必须保留本 NOTICE 文件，并注明以下两个仓库的署名：
+
+- INDUSTRYHOT.Site（本项目）：https://github.com/lachowkinman-bot/INDUSTRYHOT.Site
+- AIHOT（本项目所基于的上游框架）：https://github.com/KKKKhazix/AIHOT
+
+上游 AIHOT 项目的代码原以 MIT License 发布，其原始版权声明保留如下：
+
+    AIHOT
+    Copyright (c) 2026 数字生命卡兹克. The code is licensed under the MIT License (LICENSE).
+
+    The name "AIHOT" and the AIHOT logo are not licensed under the MIT License.
+    Please use your own name and logo for your site.
+
+本项目还包含第三方材料，按其自身条款使用：
+
+- assets/og-fonts/：Noto Sans SC，SIL Open Font License 1.1（assets/og-fonts/LICENSE）。
+
+docs/examples 中的演示信源是各发布者的公开 Feed，内容版权归其发布者所有；
+本站默认只展示摘要和原文链接。

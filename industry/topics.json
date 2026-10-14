@@ -1,0 +1,781 @@
+{
+  "groups": [
+    {
+      "key": "company",
+      "name": "公司与机构",
+      "blurb": "按机构追踪九个领域的公司、平台与监管动态"
+    },
+    {
+      "key": "field",
+      "name": "领域方向",
+      "blurb": "按方向深挖：AI 模型、酒店收益管理、跨境电商、数据合规……"
+    },
+    {
+      "key": "genre",
+      "name": "内容形态",
+      "blurb": "按内容类型浏览：发布上新、财报数据、行业报告、政策监管……"
+    }
+  ],
+  "topics": [
+    {
+      "slug": "openai",
+      "name": "OpenAI / ChatGPT",
+      "group": "company",
+      "entityId": "openai",
+      "definition": "OpenAI 的全部动态：GPT 系列模型、ChatGPT 与 Sora 产品、公司战略与人事的持续追踪。"
+    },
+    {
+      "slug": "anthropic",
+      "name": "Anthropic / Claude",
+      "group": "company",
+      "entityId": "anthropic",
+      "definition": "Anthropic 的全部动态：Claude 系列模型、Claude Code、安全研究路线与公司进展的持续追踪。"
+    },
+    {
+      "slug": "google",
+      "name": "Google / Gemini",
+      "group": "company",
+      "entityId": "google",
+      "definition": "Google 与 DeepMind 的 AI 动态：Gemini 系列、研究成果与产品生态的持续追踪。"
+    },
+    {
+      "slug": "meta",
+      "name": "Meta / Llama",
+      "group": "company",
+      "entityId": "meta",
+      "definition": "Meta 的 AI 动态：Llama 系列模型、超级智能实验室与 Meta AI 产品。"
+    },
+    {
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "group": "company",
+      "entityId": "deepseek",
+      "definition": "DeepSeek（深度求索）的模型发布、开源权重、技术报告与 API 价格变化。"
+    },
+    {
+      "slug": "qwen",
+      "name": "千问 Qwen",
+      "group": "company",
+      "entityId": "qwen",
+      "definition": "阿里千问 Qwen 系列的开源发布与迭代：从旗舰模型到端侧小模型的全谱系动态。"
+    },
+    {
+      "slug": "ernie",
+      "name": "百度文心",
+      "group": "company",
+      "entityId": "ernie",
+      "definition": "百度文心系列模型与产品动态：旗舰模型迭代、开源开放与智能云布局。"
+    },
+    {
+      "slug": "hunyuan",
+      "name": "腾讯混元",
+      "group": "company",
+      "entityId": "hunyuan",
+      "definition": "腾讯混元系列模型动态：旗舰发布、多模态与推理能力升级、生态接入。"
+    },
+    {
+      "slug": "nvidia",
+      "name": "NVIDIA 英伟达",
+      "group": "company",
+      "entityId": "nvidia",
+      "definition": "英伟达的 AI 芯片与生态动态：GPU 新品、CUDA 生态与 AI 算力市场的风向。"
+    },
+    {
+      "slug": "amd",
+      "name": "AMD",
+      "group": "company",
+      "entityId": "amd",
+      "definition": "AMD 的 AI 芯片动态：数据中心 GPU 新品、软件生态与算力市场竞争。"
+    },
+    {
+      "slug": "huazhu",
+      "name": "华住集团",
+      "group": "company",
+      "entityId": "huazhu",
+      "definition": "华住集团动态：RevPAR 等运营数据、门店扩张与加盟政策、数字化与 AI 落地。"
+    },
+    {
+      "slug": "jinjiang",
+      "name": "锦江酒店",
+      "group": "company",
+      "entityId": "jinjiang",
+      "definition": "锦江酒店动态：运营数据、品牌矩阵调整、会员体系与扩张动作。"
+    },
+    {
+      "slug": "btg",
+      "name": "首旅如家",
+      "group": "company",
+      "entityId": "btg",
+      "definition": "首旅如家动态：运营数据、中高端品牌布局、存量改造与加盟进展。"
+    },
+    {
+      "slug": "marriott",
+      "name": "万豪国际",
+      "group": "company",
+      "entityId": "marriott",
+      "definition": "万豪国际动态：全球与中国市场运营数据、新品牌发布、会员体系变化。"
+    },
+    {
+      "slug": "ihg",
+      "name": "洲际酒店集团",
+      "group": "company",
+      "entityId": "ihg",
+      "definition": "洲际酒店集团动态：运营数据、品牌引入与特许经营、数字化项目。"
+    },
+    {
+      "slug": "luckin",
+      "name": "瑞幸咖啡",
+      "group": "company",
+      "entityId": "luckin",
+      "definition": "瑞幸咖啡动态：门店与营收数据、新品营销、供应链与数字化运营。"
+    },
+    {
+      "slug": "cotti",
+      "name": "库迪咖啡",
+      "group": "company",
+      "entityId": "cotti",
+      "definition": "库迪咖啡动态：门店扩张、价格策略、加盟政策与供应链建设。"
+    },
+    {
+      "slug": "mixue",
+      "name": "蜜雪冰城",
+      "group": "company",
+      "entityId": "mixue",
+      "definition": "蜜雪冰城动态：门店规模、出海扩张、供应链与食品安全管理。"
+    },
+    {
+      "slug": "haidilao",
+      "name": "海底捞",
+      "group": "company",
+      "entityId": "haidilao",
+      "definition": "海底捞动态：门店与翻台数据、AI 订货预测与会员分层、副牌与新业态。"
+    },
+    {
+      "slug": "meituan",
+      "name": "美团",
+      "group": "company",
+      "entityId": "meituan",
+      "definition": "美团动态：外卖与到店经营数据、本地生活竞争、即时零售扩张与 AI 商家工具。"
+    },
+    {
+      "slug": "taobao",
+      "name": "淘天集团",
+      "group": "company",
+      "entityId": "taobao",
+      "definition": "淘天（阿里巴巴电商）动态：平台规则、大促策略、AI 电商工具与商家生态。"
+    },
+    {
+      "slug": "jd",
+      "name": "京东",
+      "group": "company",
+      "entityId": "jd",
+      "definition": "京东动态：零售与即时零售数据、平台政策、供应链与 AI 应用。"
+    },
+    {
+      "slug": "pdd",
+      "name": "拼多多",
+      "group": "company",
+      "entityId": "pdd",
+      "definition": "拼多多动态：平台规则与低价战略、Temu 出海进展、商家生态变化。"
+    },
+    {
+      "slug": "douyin",
+      "name": "抖音电商",
+      "group": "company",
+      "entityId": "douyin",
+      "definition": "抖音电商动态：平台规则、直播生态、流量算法、本地生活与商城建设。"
+    },
+    {
+      "slug": "bytedance",
+      "name": "字节跳动",
+      "group": "company",
+      "entityId": "bytedance",
+      "definition": "字节跳动动态：组织调整、业务线变动、AI 布局与出海进展。"
+    },
+    {
+      "slug": "shein",
+      "name": "SHEIN",
+      "group": "company",
+      "entityId": "shein",
+      "definition": "SHEIN 动态：欧美与新兴市场扩张、供应链模式、关税应对与上市进展。"
+    },
+    {
+      "slug": "beisen",
+      "name": "北森",
+      "group": "company",
+      "entityId": "beisen",
+      "definition": "北森动态：一体化 HR SaaS 版本更新、AI 面试与人才测评产品、客户与营收进展。"
+    },
+    {
+      "slug": "yonyou",
+      "name": "用友",
+      "group": "company",
+      "entityId": "yonyou",
+      "definition": "用友动态：业财税 SaaS 大版本更新、AI 能力接入与企业客户进展。"
+    },
+    {
+      "slug": "tencent",
+      "name": "腾讯",
+      "group": "company",
+      "entityId": "tencent",
+      "definition": "腾讯动态：组织与人事调整、薪酬与期权政策、企业服务与微信生态。"
+    },
+    {
+      "slug": "byd",
+      "name": "比亚迪",
+      "group": "company",
+      "entityId": "byd",
+      "definition": "比亚迪动态：产能与销量数据、组织与用工变化、出海建厂进展。"
+    },
+    {
+      "slug": "lark",
+      "name": "飞书",
+      "group": "company",
+      "entityId": "lark",
+      "definition": "飞书动态：飞书 People 等人力产品版本更新、客户案例与商业化进展。"
+    },
+    {
+      "slug": "xiaohongshu",
+      "name": "小红书",
+      "group": "company",
+      "entityId": "xiaohongshu",
+      "definition": "小红书动态：商业化进展、搜索电商闭环、本地生活布局与内容生态。"
+    },
+    {
+      "slug": "alimama",
+      "name": "阿里妈妈",
+      "group": "company",
+      "entityId": "alimama",
+      "definition": "阿里妈妈动态：广告产品升级、AI 大模型投放工具、商家营销平台变化。"
+    },
+    {
+      "slug": "kingdee",
+      "name": "金蝶",
+      "group": "company",
+      "entityId": "kingdee",
+      "definition": "金蝶动态：云 ERP 与业财税一体化版本更新、AI 能力与客户进展。"
+    },
+    {
+      "slug": "fenda",
+      "name": "分贝通",
+      "group": "company",
+      "entityId": "fenda",
+      "definition": "分贝通动态：企业费控与报销产品更新、差旅场景整合与客户进展。"
+    },
+    {
+      "slug": "samr",
+      "name": "市场监管总局",
+      "group": "company",
+      "entityId": "samr",
+      "definition": "市场监管总局动态：反垄断执法、平台监管、广告与食安监管新规。"
+    },
+    {
+      "slug": "cac",
+      "name": "国家网信办",
+      "group": "company",
+      "entityId": "cac",
+      "definition": "国家网信办动态：算法备案、生成式 AI 管理、数据出境与内容监管政策。"
+    },
+    {
+      "slug": "mckinsey",
+      "name": "麦肯锡",
+      "group": "company",
+      "entityId": "mckinsey",
+      "definition": "麦肯锡动态：重磅报告与全球趋势观点、Lilli 等 AI 工具、大中华区团队动向。"
+    },
+    {
+      "slug": "bcg",
+      "name": "BCG 波士顿咨询",
+      "group": "company",
+      "entityId": "bcg",
+      "definition": "BCG 动态：行业报告与趋势预判、AI 咨询工具与业务布局。"
+    },
+    {
+      "slug": "bain",
+      "name": "贝恩",
+      "group": "company",
+      "entityId": "bain",
+      "definition": "贝恩动态：行业报告与消费者研究、私募与尽调业务、团队变化。"
+    },
+    {
+      "slug": "rolandberger",
+      "name": "罗兰贝格",
+      "group": "company",
+      "entityId": "rolandberger",
+      "definition": "罗兰贝格动态：行业白皮书、汽车与制造领域观点、中国业务动向。"
+    },
+    {
+      "slug": "accenture",
+      "name": "埃森哲",
+      "group": "company",
+      "entityId": "accenture",
+      "definition": "埃森哲动态：技术与咨询业务数据、AI 战略与并购、大中华区团队变化。"
+    },
+    {
+      "slug": "deloitte",
+      "name": "德勤",
+      "group": "company",
+      "entityId": "deloitte",
+      "definition": "德勤动态：行业趋势报告、税务与审计监管动态、AI 工具与团队调整。"
+    },
+    {
+      "slug": "ai-models",
+      "name": "模型发布",
+      "group": "field",
+      "tags": [
+        "模型发布"
+      ],
+      "definition": "AI 基础模型的新发布、大版本迭代与能力升级：OpenAI、Google、Anthropic、Meta 与国内文心/通义/混元/DeepSeek。"
+    },
+    {
+      "slug": "ai-agent",
+      "name": "AI Agent 智能体",
+      "group": "field",
+      "tags": [
+        "AI Agent"
+      ],
+      "definition": "AI 智能体与 Agent 生态：自主规划、工具调用、垂直行业 Agent（客服/销售/数据分析）的产品迭代。"
+    },
+    {
+      "slug": "compute-chips",
+      "name": "算力与芯片",
+      "group": "field",
+      "tags": [
+        "算力/芯片"
+      ],
+      "definition": "AI 算力与芯片：英伟达/AMD/国产 GPU 新品、云厂商算力定价、推理成本下降趋势。"
+    },
+    {
+      "slug": "multimodal",
+      "name": "多模态",
+      "group": "field",
+      "tags": [
+        "多模态"
+      ],
+      "definition": "文本之外的能力：视觉理解、视频/3D 生成、语音交互的模型与产品进展。"
+    },
+    {
+      "slug": "ai-apps",
+      "name": "AI 应用",
+      "group": "field",
+      "tags": [
+        "AI 应用"
+      ],
+      "definition": "AI 搜索、代码助手、视频生成等应用与产品的重大迭代与商业化。"
+    },
+    {
+      "slug": "open-source",
+      "name": "开源生态",
+      "group": "field",
+      "tags": [
+        "开源生态"
+      ],
+      "definition": "开源模型、框架与仓库动态：权重开放、社区项目与开源商业化的消长。"
+    },
+    {
+      "slug": "ai-safety",
+      "name": "AI 安全",
+      "group": "field",
+      "tags": [
+        "AI 安全"
+      ],
+      "definition": "AI 安全与治理：越狱与防御、对齐研究、安全评测与监管沙盒政策。"
+    },
+    {
+      "slug": "hotel-operations",
+      "name": "酒店运营数据",
+      "group": "field",
+      "tags": [
+        "酒店运营"
+      ],
+      "definition": "头部集团的 RevPAR、ADR、Occ 数据与区域、商旅休闲对比——行业量价平衡的风向标。"
+    },
+    {
+      "slug": "revenue-management",
+      "name": "收益管理",
+      "group": "field",
+      "tags": [
+        "收益管理"
+      ],
+      "definition": "酒店收益管理：动态定价系统、AI 预测、渠道价格策略与量价平衡点。"
+    },
+    {
+      "slug": "ota-channels",
+      "name": "OTA 与渠道",
+      "group": "field",
+      "tags": [
+        "OTA/渠道"
+      ],
+      "definition": "携程/美团/飞猪等 OTA 的流量分配、佣金变化，抖音小红书本地生活 POI 转化与酒店直连。"
+    },
+    {
+      "slug": "hotel-ai",
+      "name": "酒店 AI 落地",
+      "group": "field",
+      "tags": [
+        "酒店AI"
+      ],
+      "definition": "AI 在酒店的落地：智能语音前台、人脸识别入住、AI 客服与收益管理系统。"
+    },
+    {
+      "slug": "hotel-membership",
+      "name": "会员与加盟",
+      "group": "field",
+      "tags": [
+        "会员/加盟"
+      ],
+      "definition": "酒店会员体系（积分互通/保级挑战）与下沉市场加盟政策、中高端品牌线扩张。"
+    },
+    {
+      "slug": "restaurant-ai",
+      "name": "餐饮 AI 落地",
+      "group": "field",
+      "tags": [
+        "餐饮AI"
+      ],
+      "definition": "连锁餐饮的 AI 经营系统：智能巡检、经营归因、营销方案自动生成与 AI 订货预测。"
+    },
+    {
+      "slug": "tea-coffee",
+      "name": "茶饮咖啡",
+      "group": "field",
+      "tags": [
+        "茶饮/咖啡"
+      ],
+      "definition": "茶饮与咖啡赛道：瑞幸/库迪/蜜雪的竞争、价格战、新品与出海。"
+    },
+    {
+      "slug": "franchise",
+      "name": "连锁与加盟",
+      "group": "field",
+      "tags": [
+        "连锁/加盟"
+      ],
+      "definition": "餐饮连锁化：加盟政策调整、开店关店数、同店销售与翻台率等核心指标。"
+    },
+    {
+      "slug": "delivery-groupbuy",
+      "name": "外卖与团购",
+      "group": "field",
+      "tags": [
+        "外卖/团购"
+      ],
+      "definition": "外卖与到店团购：美团/饿了么平台规则、商家 AI 经营助手、抖音团购核销。"
+    },
+    {
+      "slug": "food-supply-safety",
+      "name": "供应链与食安",
+      "group": "field",
+      "tags": [
+        "供应链/食安"
+      ],
+      "definition": "餐饮供应链与食品安全：AI 调度、食材损耗、明厨亮灶与食安巡检覆盖率。"
+    },
+    {
+      "slug": "platform-rules",
+      "name": "平台规则",
+      "group": "field",
+      "tags": [
+        "平台规则"
+      ],
+      "definition": "电商平台规则大战：仅退款/运费险/低价战略、商家扶持与收费政策的变化。"
+    },
+    {
+      "slug": "livestream-ecommerce",
+      "name": "直播电商",
+      "group": "field",
+      "tags": [
+        "直播电商"
+      ],
+      "definition": "直播电商生态：头部主播动向、数字人直播、机构与平台的流量博弈。"
+    },
+    {
+      "slug": "instant-retail",
+      "name": "即时零售",
+      "group": "field",
+      "tags": [
+        "即时零售"
+      ],
+      "definition": "即时零售：美团闪购/京东到家的品类扩张、小时达履约与竞争格局。"
+    },
+    {
+      "slug": "cross-border",
+      "name": "跨境电商",
+      "group": "field",
+      "tags": [
+        "跨境电商"
+      ],
+      "definition": "跨境电商出海：Temu/SHEIN/TikTok Shop 在美欧东南亚的关税应对与半托管模式。"
+    },
+    {
+      "slug": "ai-ecommerce",
+      "name": "AI 电商",
+      "group": "field",
+      "tags": [
+        "AI电商"
+      ],
+      "definition": "AI 在电商的应用：AI 导购、数字人直播、全站推广工具与 AIGC 素材生产的渗透率。"
+    },
+    {
+      "slug": "org-talent",
+      "name": "组织与人事",
+      "group": "field",
+      "tags": [
+        "组织/人事"
+      ],
+      "definition": "大厂组织变动：裁员/扩招/组织调整、核心人员流动与期权回购动态。"
+    },
+    {
+      "slug": "compensation",
+      "name": "薪酬与期权",
+      "group": "field",
+      "tags": [
+        "薪酬/期权"
+      ],
+      "definition": "薪酬结构、期权授予与回购、裁员补偿 N+几等人才激励与成本信号。"
+    },
+    {
+      "slug": "flexible-work",
+      "name": "灵活用工",
+      "group": "field",
+      "tags": [
+        "灵活用工"
+      ],
+      "definition": "灵活用工与合规：外卖骑手/网约车司机社保新规、新就业形态劳动者权益保障细则。"
+    },
+    {
+      "slug": "overseas-employment",
+      "name": "出海用工",
+      "group": "field",
+      "tags": [
+        "出海用工"
+      ],
+      "definition": "中国企业出海用工：东南亚/墨西哥/中东劳动法挑战、薪酬属地化与合规罚单。"
+    },
+    {
+      "slug": "hr-tech",
+      "name": "HR 技术",
+      "group": "field",
+      "tags": [
+        "HR技术"
+      ],
+      "definition": "HR 技术：AI 简历筛选/面试系统、员工情绪分析与离职预测、HR SaaS 大版本更新。"
+    },
+    {
+      "slug": "media-budget",
+      "name": "媒介与投放",
+      "group": "field",
+      "tags": [
+        "媒介/投放"
+      ],
+      "definition": "媒介渠道迁移：品牌在抖音/小红书/视频号的预算分配、搜索电商对传统 SEO 的冲击。"
+    },
+    {
+      "slug": "aigc-marketing",
+      "name": "AIGC 营销",
+      "group": "field",
+      "tags": [
+        "AIGC营销"
+      ],
+      "definition": "AIGC 营销实践：品牌跑通的文案/图片/视频全流程案例、KOL 与 AI 数字人投流对比。"
+    },
+    {
+      "slug": "brand-pr",
+      "name": "品牌与公关",
+      "group": "field",
+      "tags": [
+        "品牌/公关"
+      ],
+      "definition": "品牌公关事件：出圈 Campaign 拆解、联名代言效果复盘、危机公关案例。"
+    },
+    {
+      "slug": "consumer-trends",
+      "name": "消费趋势",
+      "group": "field",
+      "tags": [
+        "消费趋势"
+      ],
+      "definition": "消费趋势报告与细分赛道：国潮、情绪价值、银发经济、宠物经济的爆款策略。"
+    },
+    {
+      "slug": "private-domain",
+      "name": "私域与会员",
+      "group": "field",
+      "tags": [
+        "私域/会员"
+      ],
+      "definition": "私域与会员运营：会员客单价对比公域、会员体系升级与积分权益变化。"
+    },
+    {
+      "slug": "e-invoice-tax",
+      "name": "数电票与税务",
+      "group": "field",
+      "tags": [
+        "数电票/税务"
+      ],
+      "definition": "数电票推行进度与金税四期以数治税：对财务流程的影响和企业应对案例。"
+    },
+    {
+      "slug": "tax-incentives",
+      "name": "税收优惠",
+      "group": "field",
+      "tags": [
+        "税收优惠"
+      ],
+      "definition": "企业所得税/增值税优惠政策：研发费用加计扣除、小微企业减免的新规与延续。"
+    },
+    {
+      "slug": "cross-border-tax",
+      "name": "跨境税务",
+      "group": "field",
+      "tags": [
+        "跨境税务"
+      ],
+      "definition": "跨境税务：欧洲 VAT、美国销售税追缴、支柱二全球最低税落地进展。"
+    },
+    {
+      "slug": "finance-digital",
+      "name": "财务数字化",
+      "group": "field",
+      "tags": [
+        "财务数字化"
+      ],
+      "definition": "财务数字化：业财税一体化 SaaS 更新、企业费控/报销政策趋势与总部经济补贴。"
+    },
+    {
+      "slug": "antitrust",
+      "name": "反垄断与竞争",
+      "group": "field",
+      "tags": [
+        "反垄断"
+      ],
+      "definition": "反垄断与竞争执法：二选一、低价倾销、并购审查的新规与处罚案例。"
+    },
+    {
+      "slug": "data-compliance",
+      "name": "数据合规",
+      "group": "field",
+      "tags": [
+        "数据合规"
+      ],
+      "definition": "数据合规：《数据安全法》《个人信息保护法》行业细则、数据出境安全评估动态。"
+    },
+    {
+      "slug": "labor-ip",
+      "name": "劳动与知产",
+      "group": "field",
+      "tags": [
+        "劳动/知产"
+      ],
+      "definition": "劳动与知识产权：竞业限制/商业秘密纠纷、商标侵权与专利战裁决。"
+    },
+    {
+      "slug": "industry-regulation",
+      "name": "行业监管",
+      "group": "field",
+      "tags": [
+        "行业监管"
+      ],
+      "definition": "行业监管：网信办算法备案、市监局广告与食安、商务部涉企政策的首发修订。"
+    },
+    {
+      "slug": "mbb-consulting",
+      "name": "MBB 与四大咨询",
+      "group": "field",
+      "tags": [
+        "MBB/四大"
+      ],
+      "definition": "MBB（麦肯锡/BCG/贝恩）、四大咨询、罗兰贝格与埃森哲的重磅报告与全球趋势观点。"
+    },
+    {
+      "slug": "consulting-ai",
+      "name": "咨询 AI",
+      "group": "field",
+      "tags": [
+        "咨询AI"
+      ],
+      "definition": "AI 与咨询融合：咨询公司自研 AI 工具升级、生成式 AI 替代初级顾问的降本案例。"
+    },
+    {
+      "slug": "consulting-team",
+      "name": "咨询团队与业务",
+      "group": "field",
+      "tags": [
+        "咨询团队"
+      ],
+      "definition": "咨询行业团队与业务：大中华区合伙人晋升/跳槽、新业务线设立、招聘冻结/扩招信号。"
+    },
+    {
+      "slug": "consulting-demand",
+      "name": "咨询客户需求",
+      "group": "field",
+      "tags": [
+        "客户/市场"
+      ],
+      "definition": "咨询客户需求侧：一级市场投融资活跃度、民企传承规划、国企改革项目招标与咨询费趋势。"
+    },
+    {
+      "slug": "releases",
+      "name": "发布与上新",
+      "group": "genre",
+      "tags": [
+        "产品/服务发布"
+      ],
+      "definition": "九个领域的重要发布：新模型、新产品、新品牌线、新功能与新品的正式上线。"
+    },
+    {
+      "slug": "operating-data",
+      "name": "财报与运营数据",
+      "group": "genre",
+      "tags": [
+        "财报/运营数据"
+      ],
+      "definition": "财报与运营数据：营收、RevPAR、同店销售、GMV、用户与门店数的可核实数字。"
+    },
+    {
+      "slug": "industry-reports",
+      "name": "行业报告与趋势",
+      "group": "genre",
+      "tags": [
+        "行业报告/趋势"
+      ],
+      "definition": "行业报告、白皮书与榜单：咨询机构与权威研究的核心观点和对中国市场的预判。"
+    },
+    {
+      "slug": "company-news",
+      "name": "公司动态",
+      "group": "genre",
+      "tags": [
+        "公司动态"
+      ],
+      "definition": "公司动态：融资并购、组织人事、开店关店、合作与诉讼的商业脉搏。"
+    },
+    {
+      "slug": "policy-regulation",
+      "name": "政策与监管",
+      "group": "genre",
+      "tags": [
+        "政策/监管"
+      ],
+      "definition": "政策法规与监管：新规发布、监管处罚、合规案例与执法信号。"
+    },
+    {
+      "slug": "opinions",
+      "name": "观点与访谈",
+      "group": "genre",
+      "tags": [
+        "观点/访谈"
+      ],
+      "definition": "行业关键人物在想什么：创始人/高管访谈、分析师判断、复盘与争论。"
+    },
+    {
+      "slug": "tutorials",
+      "name": "教程与方法",
+      "group": "genre",
+      "tags": [
+        "教程/方法"
+      ],
+      "definition": "拿来就能用的实操内容：经营方法、案例拆解、工具用法与踩坑经验。"
+    }
+  ]
+}
