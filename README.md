@@ -1,8 +1,6 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.png">
-    <img src="docs/assets/banner-light.png" alt="AIHOT：每个行业，都可以有自己的 AIHOT。很多条信源流进中间的精选，再分给法律、人力资源、金融等各个行业" width="100%">
-  </picture>
+  <b>一个自己找热点、自己写日报的行业热点站框架。</b><br>
+  把信源换成你的，把精选标准换成你的 KnowHow，它就是你的行业热点站。
 </p>
 
 <p align="center">
@@ -10,12 +8,6 @@
   <img src="https://img.shields.io/badge/Node.js-24-176b75?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js 24">
   <img src="https://img.shields.io/badge/PostgreSQL-17-176b75?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL 17">
   <img src="https://img.shields.io/badge/Docker-Compose-176b75?style=flat-square&logo=docker&logoColor=white" alt="Docker Compose">
-  <a href="https://aihot.news"><img src="https://img.shields.io/badge/%E7%BA%BF%E4%B8%8A%E5%8E%9F%E7%AB%99-aihot.news-202a30?style=flat-square" alt="线上原站 aihot.news"></a>
-</p>
-
-<p align="center">
-  <b>一个自己找热点、自己写日报的网站框架。</b><br>
-  把信源换成你的，把精选标准换成你的 KnowHow，它就是你的行业热点站。
 </p>
 
 <p align="center">
@@ -26,33 +18,24 @@
   <a href="#跑起来">跑起来</a> ·
   <a href="docs/customize.md">改成你的行业</a> ·
   <a href="#它是怎么工作的">它是怎么工作的</a> ·
-  <a href="#文档">文档</a> ·
-  <a href="https://github.com/KKKKhazix/AIHOT/discussions">社区交流</a>
+  <a href="#文档">文档</a>
 </p>
 
 <br>
 
 ## 这是什么
 
-[AIHOT](https://aihot.news) 是我做的一个 AI 热点网站。它每天从一批信源里收资料，用大模型先筛一遍、再独立打两次分，挑出真正值得看的，写成中文标题和摘要；把不同来源说的同一件事聚成一个事件，按有多少人在说排出热点；每天早上出一份日报。
+这是「九域热点」（INDUSTRYHOT.Site）的开源仓库：一个**行业热点网站框架**。它每天从一批信源里收资料，用大模型先筛一遍、再独立打两次分，挑出真正值得看的，写成中文标题和摘要；把不同来源说的同一件事聚成一个事件，按有多少人在说排出热点；每天早上出一份日报。
 
-这个仓库是它的引擎和框架：网站、后台、精选流程、聚簇和热度算法，**所有提示词的原文和入选门槛**，都在这里。
+本仓库默认配置是一个「九大领域」的示例站：**AI/科技、酒店、餐饮、电商、人力资源、市场营销、企业财税、法律合规、咨询**。想做成别的行业，把信源和精选标准换成你的就行，代码基本不用动（见 [把它改成你的行业](#把它改成你的行业)）。
 
-## 为什么开源
-
-这半年，很多做法律、做 HR、做金融、做贵金属的朋友问我，能不能也给他们的行业做一个。
-
-我做不了。我不懂你们的行业，不知道哪些信源有用，也不知道什么样的消息，对你们来说才叫热点。
-
-但你们懂。
-
-既然我没办法满足所有人，那就把火种交到大家自己手上。
+网站、后台、精选流程、聚簇和热度算法、**所有提示词的原文和入选门槛**，都在这个仓库里。下载源码后，用 Docker 一条命令就能在本地跑起来（见 [跑起来](#跑起来)）。
 
 ## 说在前面
 
-- **我不是专业的开发者。** 我是设计师出身，半年前还看不太懂代码。这套代码是我和 AI 一起重写的，比以前干净了很多，但一定还有写得不好的地方。发现问题欢迎提 Issue，我不一定能很快回复，先说声抱歉。
-- **这是 AIHOT 的引擎。** 它和 AIHOT 线上跑的是同一份引擎代码，同步时直接从线上导出，不是精心打磨的通用框架。以后 AIHOT 的更新，我会尽量同步过来，但没法保证每一次都同步。模型榜、Codex 重置监控、主题页的大事记这些只对 AI 行业有意义的功能，以及 AIHOT 自己的运营工具，只留在 AIHOT 上。
-- **里面没有 AIHOT 的信源名单和运营数据。** 仓库带了 18 个公开的海外 AI 资讯源做示范，够你跑起来看效果；真正的信源，要换成你自己行业的。
+- **这是可以独立部署、可以商用的开源项目。** 代码以 [Apache License 2.0](LICENSE) 发布，允许商用和再分发；再分发时请保留对 [INDUSTRYHOT.Site](https://github.com/lachowkinman-bot/INDUSTRYHOT.Site) 与 [AIHOT](https://github.com/KKKKhazix/AIHOT) 两个仓库的署名（见 [NOTICE](NOTICE)）。
+- **本仓库基于开源框架 AIHOT 构建。** 它和 AIHOT 线上跑的是同一份引擎代码，AIHOT 的更新会尽量同步过来，但没法保证每一次都同步。
+- **默认配置带 18 个公开的九大领域示范信源**，够你跑起来看效果；真正的信源和精选标准，要换成你自己行业的（见 [把它改成你的行业](#把它改成你的行业)）。
 - **请不要用 AIHOT 的名字和 Logo。** 换上你自己的名字，它就是你的站。
 
 ## 它是怎么工作的
@@ -71,7 +54,7 @@
   <img src="docs/assets/cluster-light.png" alt="五个来源的报道聚成一个事件，事件进入当前热点榜" width="100%">
 </picture>
 
-同一件事，官网发一篇、媒体转十篇、X 上吵一天，读者只需要看到一次。AIHOT 把它们聚成一个**事件**：先用标题摘要的向量（没配向量服务时比文字重合度）在最近两周里找候选，再让模型判断是同一件事、后续进展，还是两件事；拿不准的合并，写入前再让模型复核一遍（复核可以单独换一家模型，设 `GROUP_REVIEW_MODEL`）。
+同一件事，官网发一篇、媒体转十篇、X 上吵一天，读者只需要看到一次。框架把它们聚成一个**事件**：先用标题摘要的向量（没配向量服务时比文字重合度）在最近两周里找候选，再让模型判断是同一件事、后续进展，还是两件事；拿不准的合并，写入前再让模型复核一遍（复核可以单独换一家模型，设 `GROUP_REVIEW_MODEL`）。
 
 **热度**按事件算，不按文章算：48 小时内，每个独立来源只算一次，24 小时减半。重复抓取不会多算，一家媒体发十篇也只算一次，所以排在前面的，是真正有很多人在说的事。
 
@@ -79,7 +62,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/perf-dark.png">
-  <img src="docs/assets/perf-light.png" alt="AIHOT 线上实测：页面中位数 10 毫秒，95% 在 50 毫秒内；接口中位数 6 毫秒，95% 在 12 毫秒内；文章页 95% 在 14 毫秒内" width="100%">
+  <img src="docs/assets/perf-light.png" alt="线上实测：页面中位数 10 毫秒，95% 在 50 毫秒内；接口中位数 6 毫秒，95% 在 12 毫秒内；文章页 95% 在 14 毫秒内" width="100%">
 </picture>
 
 ## 你会得到什么
@@ -104,11 +87,11 @@
   <img src="docs/assets/shots-light.png" alt="首页的每日精选，关于页的信源河" width="100%">
 </picture>
 
-<p align="center"><sub>截图来自用示范信源跑起来的本地站，站名是默认的 MyHOT。</sub></p>
+<p align="center"><sub>截图来自用示范信源跑起来的本地站。</sub></p>
 
 ## 跑起来
 
-想创建自己的独立站点，可以先点 [Use this template](https://github.com/KKKKhazix/AIHOT/generate)，再克隆你生成的仓库。想持续合并上游更新或贡献代码，建议先 Fork。下面的命令适合直接试用本仓库（已经下载了源码的，跳过 `git clone`，直接进仓库目录执行后面的命令）。
+下面的命令适合直接试用本仓库（已经下载了源码的，跳过 `git clone`，直接进仓库目录执行后面的命令）。
 
 需要 [Docker](https://docs.docker.com/get-started/get-docker/)、[Node.js 24](https://nodejs.org/en/download)（运行 `init-env` 生成配置要用），和一个 OpenAI 兼容的模型 API Key（DeepSeek、千问、智谱都可以）。
 
@@ -168,19 +151,7 @@ docker compose up -d --build
 
 ## 交流与贡献
 
-部署和使用问题到 [问答区](https://github.com/KKKKhazix/AIHOT/discussions/categories/q-a)，新想法到 [想法交流区](https://github.com/KKKKhazix/AIHOT/discussions/categories/ideas)，欢迎在 [作品展示区](https://github.com/KKKKhazix/AIHOT/discussions/categories/show-and-tell) 分享你做出的行业热点站。
-
-发现 Bug 或有明确的功能建议，可以 [提交 Issue](https://github.com/KKKKhazix/AIHOT/issues/new/choose)。准备改代码前，先看 [贡献说明](CONTRIBUTING.md)；安全漏洞请走 [私密报告入口](SECURITY.md)。
-
-## 最后
-
-AIHOT 曾经只是我无数个深夜里，一个很小、很小的念头。
-
-我不知道它会被改成什么样子，会走到多远的地方。但这可能就是开源最浪漫的地方。
-
-剩下的路，就交给你们了。
-
-<p align="right">—— 数字生命卡兹克</p>
+部署和使用问题、新想法和作品展示，可以到上游框架 AIHOT 仓库的 [问答区](https://github.com/KKKKhazix/AIHOT/discussions/categories/q-a) 和 [想法交流区](https://github.com/KKKKhazix/AIHOT/discussions/categories/ideas)；发现 Bug 或有明确的功能建议，可以 [提交 Issue](https://github.com/KKKKhazix/AIHOT/issues/new/choose)。准备改代码前，先看 [贡献说明](CONTRIBUTING.md)；安全漏洞请走 [私密报告入口](SECURITY.md)。
 
 ## 许可
 
